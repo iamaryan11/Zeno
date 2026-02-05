@@ -1,0 +1,18 @@
+{
+  "name": "zeno",
+  "version": "1.0.0",
+  "description": "A GenAI code reviewer",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aryan",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.40.0",
+    "dotenv": "^17.2.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
