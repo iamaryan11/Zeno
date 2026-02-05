@@ -61,3 +61,55 @@ async function writeFile({file_path,content}){
 
 const tools={};
 
+// tools declaration:
+
+const listFilesTool={
+    name:"listFiles",
+    description:"Get all JavaScript files in a directory",
+    parameters:{
+        type:Type.OBJECT,
+        properties:{
+            directory:{
+                type:Type.STRING,
+                description:"Directory path to scan"
+            }
+        },
+        required:["directory"]
+    },
+}
+
+
+const readFilesTool={
+    name:"readFile",
+    description:"Read a file's content",
+    parameters:{
+        type:Type.OBJECT,
+        properties:{
+            file_path:{
+                type:Type.STRING,
+                description:"Path to file"
+            }
+        },
+        required:["file_path"]
+    },
+}
+
+
+const writeFileTool={
+    name:"writeFile",
+    description:"Write fixed content back to the file",
+    parameters:{
+        type:Type.OBJECT,
+        properties:{
+            file_path:{
+                type:Type.STRING,
+                description:"Path to the file to write"
+            },
+            content:{
+                type:Type.STRING,
+                description:"The fixed/corrected content",
+            }
+        },
+        required:["file_path","content"]
+    },
+}
